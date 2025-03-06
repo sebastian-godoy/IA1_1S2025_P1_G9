@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+:root {
+    --primary-color: #36aca3;
+    --secondary-color: #f08c00;
+    --background-default: #212c31;
+    --background-paper: #212c31;
+    --text-primary: #faf9f6;
+    --error-color: #f54f42;
+    --warning-color: #f5f509;
+    --info-color: #29b6f6;
+    --font-family-roboto: 'Roboto', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+  body {
+    font-family: var(--font-family-roboto);
+    background-color: var(--background-default);
+    color: var(--text-primary);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background-color: var(--background-paper);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: var(--text-primary);
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: var(--background-default);
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  button.primary {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+  }
+  
+  button.primary:hover {
+    background-color: #2e8f7d;
+  }
+  
+  .forgot-password {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+
+.login-container input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;  
+  background-color: #667379;
+}
+
+
+
+
+
+.content {
+  display: flex;
+  align-items: flex-start; /* Esto asegura que los botones se alineen en la parte superior */
+  justify-content: space-between;
+}
+
+.content .list {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-right: 50px;
+  position: relative;
+}
+
+.content .list label {
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  cursor: pointer;
+  padding-left: 25px;
+  transition: all 0.5s ease;
+  color: #333;
+  z-index: 12;
+}
+
+#home:checked ~ .list label.home,
+#blog:checked ~ .list label.blog,
+#help:checked ~ .list label.help,
+#code:checked ~ .list label.code,
+#about:checked ~ .list label.about {
+  color: #fff;
+}
+
+.content .list label:hover {
+  color: #212c31;
+  
+}
+
+.content .slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  border-radius: 12px;
+  background: #212c31;
+  transition: all 0.4s ease;
+}
+
+#home:checked ~ .list .slider { top: 0; }
+#blog:checked ~ .list .slider { top: 60px; }
+#help:checked ~ .list .slider { top: 120px; }
+#code:checked ~ .list .slider { top: 180px; }
+#about:checked ~ .list .slider { top: 240px; }
+
+.content .text-content {
+  width: 80%;
+  height: 100%;
+}
+
+.content .text {
+  display: none;
+}
+
+.content .text .title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.content .text p {
+  text-align: justify;
+  color: #000;
+
+}
+
+.content .text-content .home {
+  display: block;
+}
+
+#home:checked ~ .text-content .home,
+#blog:checked ~ .text-content .blog,
+#help:checked ~ .text-content .help,
+#code:checked ~ .text-content .code,
+#about:checked ~ .text-content .about {
+  display: block;
+}
+
+#blog:checked ~ .text-content .home,
+#help:checked ~ .text-content .home,
+#code:checked ~ .text-content .home,
+#about:checked ~ .text-content .home {
+  display: none;
+}
+
+.content input {
+  display: none;
+}
+
+
+
+
+.search-button {
+  background-color: #667379;  color: var(--text-primary); 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 1rem; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #2e8f7d; 
+}
+
+.table-wrapper {
+  background: #706d6d;
+  padding: 20px 25px;
+  min-width: 1000px;
+
+  height: 670px;
+  overflow-y: auto; 
+}
+
+
+.table-title {        
+	padding-bottom: 15px;
+	background: #435d7d;
+	color: #fff;
+	padding: 16px 30px;
+	min-width: 100%;
+	margin: -20px -25px 10px;
+	border-radius: 3px 3px 0 0;
+}
+.table-title .btn-group {
+	float: right;
+}
+
+.table tr td {
+  text-align: left;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #706d6d;
+  border-radius: 3px 3px 0 0;
+
+}
+.table-title .btn {
+	float: right;
+	font-size: 13px;
+	border: none;
+	min-width: 50px;
+	border-radius: 2px;
+	border: none;
+	outline: none !important;
+	margin-left: 10px;
+}
+
+.table-title .btn i {
+	float: left;
+	font-size: 21px;
+	margin-right: 5px;
+}
+
+
+table.table td a.edit {
+	color: #FFC107;
+}
+table.table td a.delete {
+	color: #F44336;
+}
+table.table td i {
+	font-size: 19px;
+}

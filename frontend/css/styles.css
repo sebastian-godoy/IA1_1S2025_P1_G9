@@ -1,0 +1,87 @@
+.container-fluid {
+    position: relative; /* Necesario para posicionar la capa encima */
+    background-image: url('https://i.pinimg.com/736x/80/6e/67/806e6778987c6e55f3013829d8782202.jpg');
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Esto mueve el contenedor hacia abajo */
+}
+
+.container-fluid::before {
+    content: ''; /* Necesario para crear un pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212c31b2; /* Capa sombreada encima de la imagen */
+    z-index: 1; /* Asegura que la capa esté encima de la imagen */
+}
+
+.container {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté encima de la capa sombreada */
+    margin-top: 80px; /* Ajusta la posición hacia abajo */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+h1.text-center {
+    font-family: 'Arial', sans-serif; /* Cambia la fuente si lo deseas */
+    font-size: 3em; /* Tamaño grande para el título */
+    font-weight: bold;
+    color: #36aca3; /* Blanco para hacer contraste con el fondo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para destacar el texto */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h2.text-center {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.6em;
+    color: #fff;
+    text-shadow: 1px 1px 4px #212c31; /* Sombra sutil */
+    line-height: 1.6; /* Mejor espaciado entre líneas */
+    margin-bottom: 40px;
+    max-width: 80%; /* Limita el ancho para que no se vea demasiado extenso */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row.justify-content-between {
+    margin-top: 150px; /* Ajusta el valor según cuánto lo quieras mover hacia abajo */
+}
+
+.btn {
+    width: 80%;
+    padding: 12px 25px;
+    transition: all 0.3s ease-in-out;
+    height: 75px;
+    border:  4px solid;    
+    font: 1.5em sans-serif;
+    font-weight: bold;
+    color: #7eb0c7;
+}
+
+:root {
+    --primary-color: #36aca3;
+    --secondary-color: #f08c00;
+    --background-default: #212c31;
+    --background-paper: #212c31;
+    --text-primary: #faf9f6;
+    --error-color: #f54f42;
+    --warning-color: #f5f509;
+    --info-color: #29b6f6;
+    --font-family-roboto: 'Roboto', sans-serif;
+  }
