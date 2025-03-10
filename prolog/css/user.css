@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #444;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #555;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.selection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.selection {
+    width: 80%;
+    text-align: left;
+}
+select, button {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+.checkbox-group {
+    display: none;
+}
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #81c8e7;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Cambiado a column para apilar elementos */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #2b3948;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Espacio debajo del contenedor */
+}
+
+.button-next {
+    width: auto; /* Cambiar de 10% a auto */
+    padding: 0; /* Quitar el padding del div */
+    text-align: center;
+    margin-top: 20px;
+    position: static; /* Cambiar de relative a static */
+}
+
+.button-next button {
+    width: auto; /* Hacer que el botón se ajuste al contenido */
+    padding: 10px 20px; /* Añadir padding horizontal */
+    min-width: 120px; /* Ancho mínimo para el botón */
+}
+
+.button-container button:hover {
+    background-color: rgb(105, 46, 46);
+}
+
+.button-next button:hover {
+    background-color: rgb(105, 46, 46);
+}

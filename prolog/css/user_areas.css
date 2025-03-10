@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #81c8e7;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #2b3948;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.interests, .preferences {
+    width: 48%;
+    text-align: left;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table, th, td {
+    border: 1px solid white;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Sección de preguntas con scroll */
+.preferences {
+    max-height: 250px; /* Altura máxima */
+    overflow-y: auto;  /* Scroll interno */
+    padding-right: 10px; /* Espacio para evitar ocultar scrollbar */
+}
+
+.checkbox-group, .radio-group {
+    margin-top: 10px;
+}
+
+.button-container {
+    text-align: right;
+    width: 100%;
+    margin-top: 20px;
+}
+.button-next {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button-next:hover {
+    background-color: rgb(201, 132, 132);
+}

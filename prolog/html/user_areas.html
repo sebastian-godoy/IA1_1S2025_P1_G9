@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniMatch - Preferencias</title>
+    <script src="/JS/tau-prolog.js"></script>
+    <link rel="stylesheet" href="/css/user_areas.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bienvenido</h1>
+        <p>Ingresa los datos solicitados y descubre tu carrera adecuada.</p>
+
+        <div class="content">
+            
+            <div class="interests">
+                <h2>Ingrese el porcentaje de interés sobre los siguientes temas</h2>
+                <table>
+                    <tr>
+                        <th>Área</th>
+                        <th>Interés (%)</th>
+                    </tr>
+                    <tr>
+                        <td>Ingeniería y tecnología</td>
+                        <td><input type="number" min="0" max="100" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Ciencias de la salud</td>
+                        <td><input type="number" min="0" max="100" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Economía y negocios</td>
+                        <td><input type="number" min="0" max="100" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Arte y diseño</td>
+                        <td><input type="number" min="0" max="100" placeholder=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Educacion y pedagogia</td>
+                        <td><input type="number" min="0" max="100" placeholder=""></td>
+                    </tr>
+
+                    <tr>
+                        <td>Ciencias sociales y humanidades</td>
+                        <td><input type="number" min="0" max="100" placeholder=""></td>
+                    </tr>
+                </table>
+            </div>
+
+            
+            <div class="preferences">
+                <h2>Preferencias</h2>
+                
+                <div class="checkbox-group">
+                    <p>1. ¿Cómo prefieres aprender?</p>
+                    <label><input type="radio" name="forma_aprendizaje" value="practica">A través de la práctica y experimentos</label><br>
+                    <label><input type="radio" name="forma_aprendizaje" value="lectura">Leyendo y analizando información</label><br>
+                    <label><input type="radio" name="forma_aprendizaje" value="creacion">Creando o diseñando algo nuevo</label><br>
+                    <label><input type="radio" name="forma_aprendizaje" value="problemas">Resolviendo problemas complejos</label>
+                </div>
+                
+                <div class="radio-group">
+                    <p>2. ¿Si pudieras elegir un trabajo ideal, ¿qué harías?</p>
+                    <label><input type="radio" name="trabajo_ideal" value="matematicas">Resolver problemas matemáticos o lógico</label><br>
+                    <label><input type="radio" name="trabajo_ideal" value="investigacion">Investigar sobre temas que me interesan</label><br>
+                    <label><input type="radio" name="trabajo_ideal" value="salud">Ayudar a las personas con su salud o bienestar</label><br>
+                    <label><input type="radio" name="trabajo_ideal" value="diseno">Diseñar edificios, productos o gráfico</label><br>
+                    <label><input type="radio" name="trabajo_ideal" value="liderazgo">Dirigir un equipo o tomar decisiones import</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <p>3. ¿Cómo te sientes cuando trabajas en equipo?</p>
+                    <label><input type="radio" name="trabajo_equipo" value="compartir">Me gusta porque puedo compartir ideas</label><br>
+                    <label><input type="radio" name="trabajo_equipo" value="solo">Prefiero trabajar solo</label><br>
+                    <label><input type="radio" name="trabajo_equipo" value="organizado">Me gusta si el equipo está bien organizado</label><br>
+                    <label><input type="radio" name="trabajo_equipo" value="depende">Depende del tipo de trabajo</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <p>4. ¿Qué actividad disfrutas más en tu tiempo libre?</p>
+                    <label><input type="radio" name="tiempo_libre" value="leer">Leer o escribir</label><br>
+                    <label><input type="radio" name="tiempo_libre" value="investigar">Investigar cosas nuevas en internet</label><br>
+                    <label><input type="radio" name="tiempo_libre" value="experimentos">Hacer experimentos o proyectos tecnológicos</label><br>
+                    <label><input type="radio" name="tiempo_libre" value="arte">Dibujar, pintar o diseñar</label><br>
+                    <label><input type="radio" name="tiempo_libre" value="videojuegos">Jugar videojuegos o programar</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <p>5. ¿Cómo te imaginas tu trabajo ideal?</p>
+                    <label><input type="radio" name="ambiente_trabajo" value="oficina">Sentado en una oficina analizando datos</label><br>
+                    <label><input type="radio" name="ambiente_trabajo" value="viajando">Viajando y conociendo gente nueva</label><br>
+                    <label><input type="radio" name="ambiente_trabajo" value="laboratorio">En un laboratorio o en un hospital</label><br>
+                    <label><input type="radio" name="ambiente_trabajo" value="innovacion">Creando o diseñando cosas innovadoras</label><br>
+                    <label><input type="radio" name="ambiente_trabajo" value="liderazgo">Dirigiendo un equipo y tomando decisiones</label>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="button-container">
+            <button class="button-next" onclick="verResultados()">Ver Resultados</button>
+        </div>
+    </div>
+
+    <script>
+      
+    </script>
+
+</body>
+<script src="/JS/user.js"></script>
+</html>

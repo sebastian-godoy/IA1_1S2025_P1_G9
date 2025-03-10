@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="/JS/tau-prolog.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <span>Panel de Administración</span>
+        <button onclick="cerrarSesion()" class="logout-button">Cerrar Sesión</button>
+    </div>
+    <div class="container">
+        <h1>Administración</h1>
+        <p>Administración y configuración general del sistema</p>
+        
+        <div class="file-buttons">
+            <input type="file" id="fileInput" accept=".pl">
+            <button onclick="triggerFileInput()">📂 Cargar archivo .pl</button>
+            <button id="btnDescargar">📥 Descargar archivo .pl</button>
+        </div>
+        <div class="tables-container">
+            <div class="table">
+                <h3>Facultades <button id="btnAgregar" class="add-button">+</button></h3>
+                <table id="tablaFacultades">
+                    <tr><th>Facultades</th><th>Acciones</th></tr>
+                </table>
+            </div>
+            <div class="table">
+                <h3>Carreras</h3>
+                <table>
+                    <tr><th>Carrera</th><th>Acciones</th></tr>
+                    <tr><td>Ingeniería en Ciencias y Sistemas</td><td class="actions"><button onclick="editarItem()">✏</button><button onclick="confirmDelete()">🗑</button></td></tr>
+                </table>
+            </div>
+            <div class="table">
+                <h3>Aptitudes</h3>
+                <table>
+                    <tr><th>Aptitud</th><th>Acciones</th></tr>
+                    <tr><td>Creatividad e innovación</td><td class="actions"><button onclick="editarItem()">✏</button><button onclick="confirmDelete()">🗑</button></td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="button-container">
+            <button>Guardar</button>
+        </div>
+    </div>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <p>Editar facultad:</p>
+            <input type="hidden" id="editIndex">
+            <input type="text" id="editText">
+            <br><br>
+            <button onclick="guardar()">Guardar</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="/JS/admin.js"></script>
+    <script>
+        let sesion = pl.create();
+
+        function triggerFileInput() {
+            document.getElementById('fileInput').click();
+        }
+
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            const archivo = e.target.files[0];
+            if (!archivo) {
+                alert('No seleccionaste archivo');
+                return;
+            }
+
+            const lector = new FileReader();
+            lector.onload = function(e) {
+                const contenido = e.target.result;
+                console.log('Contenido del archivo .pl:', contenido);
+                localStorage.setItem('codigoProlog', contenido);
+
+                sesion.consult(contenido, {
+                    success: () => {
+                        alert('Base de conocimiento cargada correctamente');
+                    },
+                    error: (err) => {
+                        alert('Error al cargar el archivo .pl: ' + err);
+                    }
+                });
+            };
+            lector.readAsText(archivo);
+        });
+
+        document.getElementById('btnDescargar').addEventListener('click', function() {
+            const contenido = localStorage.getItem('codigoProlog');
+            if (contenido) {
+                const blob = new Blob([contenido], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'base_conocimiento.pl';
+                a.click();
+                URL.revokeObjectURL(url);
+            } else {
+                alert('No hay datos para descargar.');
+            }
+        });
+
+    
+    </script>
+    
+<script src="/JS/admin.js"></script>
+    
+</body>
+</html>

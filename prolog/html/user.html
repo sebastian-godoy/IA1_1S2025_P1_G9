@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniMatch</title>
+    <script src="/JS/tau-prolog.js"></script>
+    <link rel="stylesheet" href="/css/user.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido</h1>
+        <p>Ingresa los datos solicitados y descubre tu carrera adecuada.</p>
+        
+        <div class="selection-container">
+            <div class="selection">
+                <label for="category">Seleccione una categoría:</label>
+                <select id="category" onchange="updateOptions()">
+                    <option value="aptitudes">Aptitudes</option>
+                    <option value="habilidades">Habilidades Técnicas</option>
+                </select>
+                
+                <div id="aptitudes" class="checkbox-group">
+                    <label><input type="checkbox">Facilidad para el razonamiento lógico</label><br>
+                    <label><input type="checkbox">Creatividad e innovación</label><br>
+                    <label><input type="checkbox">Pensamiento analítico y crítico</label><br>
+                    <label><input type="checkbox">Buena memoria y retención de información</label><br>
+                    <label><input type="checkbox">Capacidad para resolver problemas</label><br>
+                    <label><input type="checkbox">Empatía y sensibilidad social</label><br>
+                    <label><input type="checkbox">Interés por la investigación científica</label><br>
+                    <label><input type="checkbox">Facilidad para aprender idiomas</label><br>
+                    <label><input type="checkbox">Coordinación motriz y precisión manual</label><br>
+                    <label><input type="checkbox">Interés en la naturaleza y el medio ambiente</label><br>
+                </div>
+                
+                <div id="habilidades" class="checkbox-group" style="display: none;">
+                    <label><input type="checkbox">Resolver problemas matemáticos</label><br>
+                    <label><input type="checkbox">Conocimientos de programacion</label><br>
+                    <label><input type="checkbox">Diseñar y dibujar</label><br>
+                    <label><input type="checkbox">Hablar en público con confianza</label><br>
+                    <label><input type="checkbox">Manejo de herramientas digitales</label><br>
+                    <label><input type="checkbox">Análisis de datos e investigación</label><br>
+                    <label><input type="checkbox">Trabajo en equipo</label><br>
+                    <label><input type="checkbox">Redacción y comprensión de textos</label><br>
+                    <label><input type="checkbox">Atención a personas en situaciones difíciles</label><br>
+                    <label><input type="checkbox">Trabajo con animales y naturaleza</label><br>
+
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button onclick="obtenerDatos()">Agregar</button>
+        </div>
+    </div>
+    <div class="button-next">
+        <button onclick="siguiente()">Siguiente</button>
+    </div>
+    <script src="/JS/user.js"></script>
+</body>
+</html>
