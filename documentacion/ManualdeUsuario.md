@@ -99,10 +99,18 @@ El panel de administración permite a los administradores gestionar y configurar
 
 
 #### Secciones Principales:
+
 1. **Administración y Configuración General**:
    - **Cargar archivo .pl**: Permite cargar un archivo de configuración en formato `.pl`.
    - **Descargar archivo .pl**: Permite descargar un archivo de configuración en formato `.pl`.
 
+2. **Gestión de Facultades, Carreras y Aptitudes**:
+   - **Facultades**: Lista de facultades disponibles en el sistema.
+     - **Acciones**: Editar o eliminar facultades.
+   - **Carreras**: Lista de carreras asociadas a cada facultad.
+     - **Acciones**: Editar o eliminar carreras.
+   - **Aptitudes**: Lista de aptitudes disponibles para los tests de orientación.
+     - **Acciones**: Editar o eliminar aptitudes.
 
 ![image](https://github.com/sebastian-godoy/IA1_1S2025_P1_G9/blob/develop/documentacion/imagenes/admin.PNG)
 
