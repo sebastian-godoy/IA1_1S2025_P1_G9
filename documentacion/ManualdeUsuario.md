@@ -12,9 +12,10 @@
 ## PROYECTO 1  MANUAL DE USUARIO
 
 
->>**Nombre:** Mynor Francisco Morán García **Carne:** 201603232
+>>**Nombre:** Sebastián Edgardo Godoy Salvatierra  **Carne:** 202002940
 
->>**Nombre:** Moises David Maldonado de León **Carne:** 202010833
+>>**Nombre:** Gerson Oswaldo Ruíz Ramírez 
+**Carne:** 202011405
 
 >>**Nombre:** Genesis Nahomi Aparicio Acan **Carne:** 202113293
 
@@ -57,11 +58,53 @@ La aplicación web cuenta con varias funcionalidades las cuales se describen a c
 
 ### Pagina de inicio
 En la página de inicio de UniMatch, los estudiantes pueden acceder a las funcionalidades básicas del sistema sin necesidad de autenticación. Esto permite una experiencia rápida y sencilla para explorar las opciones disponibles.de igual forma hay una seccion donde los administradores de esta pagina pueden ingresar
-![image](https://hackmd.io/_uploads/rkAJA5GVkg.png)
+![image](https://github.com/sebastian-godoy/IA1_1S2025_P1_G9/blob/develop/documentacion/imagenes/inicio.PNG)
 
 
 ## USUARIO
 
+### Ingreso de Datos
+Para descubrir la carrera adecuada, los estudiantes deben ingresar los datos solicitados en la pantalla de bienvenida.
+- **Aptitudes**: Selecciona esta opción para realizar un test basado en tus habilidades y preferencias.
+- **Habilidades Técnicas**: Inicia el test de orientación basado en habilidades técnicas.
+![image](https://github.com/sebastian-godoy/IA1_1S2025_P1_G9/blob/develop/documentacion/imagenes/bienvenida.PNG)
+
+
+### Categoría: Aptitudes
+En esta categoría, los estudiantes pueden seleccionar entre las siguientes aptitudes que mejor describan sus habilidades y preferencias
+![image](https://github.com/sebastian-godoy/IA1_1S2025_P1_G9/blob/develop/documentacion/imagenes/aptitudes.PNG)
+
+
+### Categoría: Habilidades Técnicas
+En esta categoría, los estudiantes pueden seleccionar entre las siguientes habilidades técnicas que mejor describan sus capacidades
+![image](https://github.com/sebastian-godoy/IA1_1S2025_P1_G9/blob/develop/documentacion/imagenes/habilifades.PNG)
+
+
+### Ingreso de Porcentajes de Interés y Preferencias de Aprendizaje y Trabajo Ideal
+En esta sección, los estudiantes deben ingresar el porcentaje de interés que tienen en diferentes áreas académicas. Esto ayuda al sistema a generar recomendaciones más precisas.Ademas en esta sección, los estudiantes pueden seleccionar sus preferencias de aprendizaje y describir su trabajo ideal.
+
+![image](https://github.com/sebastian-godoy/IA1_1S2025_P1_G9/blob/develop/documentacion/imagenes/porcentaje.PNG)
+
+
+## ADMINISTRACION
+
+### Login
+Los administradores deben iniciar sesión para acceder al panel de administración y gestionar la configuración del sistema.
+![image](https://github.com/sebastian-godoy/IA1_1S2025_P1_G9/blob/develop/documentacion/imagenes/login.PNG)
+
+
+
+### Funcionalidades del Panel de Administración
+El panel de administración permite a los administradores gestionar y configurar el sistema de UniMatch.
+
+
+#### Secciones Principales:
+1. **Administración y Configuración General**:
+   - **Cargar archivo .pl**: Permite cargar un archivo de configuración en formato `.pl`.
+   - **Descargar archivo .pl**: Permite descargar un archivo de configuración en formato `.pl`.
+
+
+![image](https://github.com/sebastian-godoy/IA1_1S2025_P1_G9/blob/develop/documentacion/imagenes/admin.PNG)
 
 
 
